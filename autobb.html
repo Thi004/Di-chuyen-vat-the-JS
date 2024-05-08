@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="bubble.png" style="height:100px;width:100px; top: 100px; left: 200px; position: absolute" id="bong"/></body>
+<script>
+    let s = 3
+    let s1 = 3
+    setInterval(() => {
+        let bb = document.getElementById('bong').value;
+        bong.style.left = parseInt(bong.style.left) + s + 'px';
+        bong.style.top = parseInt(bong.style.top) + s1 + 'px';
+        if (parseInt(bong.style.left) > window.innerWidth - bong.width) {
+            s = -3;
+        }
+        if (parseInt(bong.style.left) <= 0) {
+            s = 3;
+        }
+        if (parseInt(bong.style.top) > window.innerHeight - bong.height) {
+            s1 = -3;
+        }
+        if (parseInt(bong.style.top) <= 0) {
+            s1 = 3;
+        }
+    }, 1)
+</script>
+</body>
+</html>
