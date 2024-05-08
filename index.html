@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="Cat.jpg" alt="" style="width: 100px; position: absolute; top: 100px; left: 200px" id="cat">
+<button onclick="goRight()">Turn Right</button>
+<button onclick="goLeft()">Turn Left</button>
+<button onclick="goUp()">Go Up</button>
+<button onclick="goDown()">Go Down</button>
+<script>
+    function goRight() {
+        let son = document.getElementById('cat');
+        son.style.left = parseInt(son.style.left) + 20 + 'px'
+    }
+
+    function goLeft() {
+        let son = document.getElementById('cat');
+        son.style.left = parseInt(son.style.left) - 20 + 'px'
+    }
+    function goUp() {
+        let son = document.getElementById('cat');
+        son.style.top = parseInt(son.style.top) - 20 + 'px'
+    }
+    function goDown() {
+        let son = document.getElementById('cat');
+        son.style.top = parseInt(son.style.top) + 20 + 'px' // + Math.radom()*100 + 'px' : di chuyen tu do tu 1-> 100
+    }
+</script>
+</body>
+</html>
