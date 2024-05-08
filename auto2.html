@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyển từ trái qua phải</title>
+</head>
+<body>
+<img src="unicorn.jpg" style="width: 150px;height: 150px; position: absolute; left: -100px;top: 100px" id="pony"/>
+</body>
+<script>
+    let s = 3
+    setInterval(() => {
+        let po = document.getElementById('pony');
+        po.style.left = parseInt(po.style.left) + s + 'px';
+        if (parseInt(po.style.left) >= window.innerWidth) {
+            po.style.left = -100 + 'px';
+        }
+    }, 1)
+</script>
+</html>

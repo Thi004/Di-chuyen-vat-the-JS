@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyen HCN</title>
+</head>
+<body>
+<img src="unicorn.jpg" style="width: 150px;height: 150px; position: absolute; left: 0;top: 0" id="pony"/></body>
+<script>
+    let move = 'right';
+    let s = 3;
+    setInterval(() => {
+        let po = document.getElementById('pony');
+        if (move === 'right' && parseInt(po.style.left) < window.innerWidth - po.width) {
+            po.style.left = parseInt(po.style.left) + s + 'px'
+        } else if (move === 'right') {
+            move = 'down';
+        }
+        if (move === 'down' && parseInt(po.style.top) < window.innerHeight - po.height) {
+            po.style.top = parseInt(po.style.top) + s + 'px'
+        } else if (move === 'down') {
+            move = 'left';
+        }
+        if (move === 'left' && parseInt(po.style.left) > 0) {
+            po.style.left = parseInt(po.style.left) - s + 'px'
+        } else if (move === 'left') {
+            move = 'up';
+        }
+        if (move === 'up' && parseInt(po.style.top) > 0) {
+            po.style.top = parseInt(po.style.top) - s + 'px'
+        } else if (move === 'up') {
+            move = 'right';
+        }
+    }, 1)
+</script>
+</html>

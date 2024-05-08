@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Auto</title>
+    <title>Di chuyển tự động trái phải</title>
 </head>
 <body>
 <img src="Cat.jpg" alt="" style="width: 100px; position: absolute; top: 100px; left: 200px" id="cat">
@@ -11,7 +11,7 @@
     setInterval(() => {
         let son = document.getElementById('cat');
         son.style.left = parseInt(son.style.left) + s + 'px';
-        if (parseInt(son.style.left) > window.innerWidth) {
+        if (parseInt(son.style.left) > window.innerWidth -son.width) {
             s = -3;
         }
         if (parseInt(son.style.left) < 0) {
