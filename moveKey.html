@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>di chuyển bằng bàn phím</title>
+</head>
+<body>
+<img src="unicorn.jpg" style="width: 150px;height: 150px; position: absolute; left: 100px;top: 100px" id="cat"/>
+</body>
+<script>
+    function goRight() {
+        let son = document.getElementById('cat');
+        son.style.left = parseInt(son.style.left) + 20 + 'px'
+    }
+
+    function goLeft() {
+        let son = document.getElementById('cat');
+        son.style.left = parseInt(son.style.left) - 20 + 'px'
+    }
+
+    function goUp() {
+        let son = document.getElementById('cat');
+        son.style.top = parseInt(son.style.top) - 20 + 'px'
+    }
+
+    function goDown() {
+        let son = document.getElementById('cat');
+        son.style.top = parseInt(son.style.top) + 20 + 'px' // + Math.radom()*100 + 'px' : di chuyen tu do tu 1-> 100
+    }
+
+    window.addEventListener('keydown', (e) => {
+        console.log(e.key)
+
+        if (e.key === 'a') {
+            goLeft();
+        }
+        if (e.key === 'd') {
+            goRight();
+        }
+        if (e.key === 'w') {
+            goUp();
+        }
+        if (e.key === 's') {
+            goDown();
+        }
+
+        // a -> sang trai
+        // d -> sang phai
+        // w -> len tren
+        // s -> xuong duoi
+    })
+</script>
+</html>

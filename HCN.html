@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCN</title>
+</head>
+<body>
+<img src="unicorn.jpg" style="width: 150px;height: 150px; position: absolute; left: 100px;top: 100px" id="pony"/>
+</body>
+<script>
+    // di chuyển hcn không chạm cạnh màn hình
+    let w = 3
+    let h = 0
+    let quangDuong = 0;
+    let son = document.getElementById('pony')
+    setInterval(() => {
+        son.style.left = parseInt(son.style.left) + w + "px"
+        son.style.top = parseInt(son.style.top) + h + 'px'
+        quangDuong += 3;
+        if (quangDuong >= 600) {
+            w = 0;
+            h = 3;
+        }
+        if (quangDuong >= 900) {
+            w = -3;
+            h = 0;
+        }
+        if (quangDuong >= 1500) {
+            w = 0;
+            h = -3;
+        }
+        if (quangDuong >= 1800) {
+            w = 3;
+            h = 0;
+            quangDuong = 0;
+        }
+    }, 10)
+</script>
+</html>
